@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo1</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>DEMO 1</h1>
+
+<div class="awesome">
+  <%= yield %>
+</div>
+
+<h3>(c) 2012 GA industries</h3>
+
+</body>
+</html>

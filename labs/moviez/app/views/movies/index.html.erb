@@ -1,0 +1,9 @@
+<% @movies.each do |movie| %>
+  <%= image_tag movie.poster %>
+  <ul>
+    <li><%= movie.name %></li>
+    <li><%= movie.gross %></li>
+    <li><%= movie.actors %></li>
+    <li><%= link_to "Delete movie", delete_movie_path(movie), :method => :delete %></li>
+  </ul>
+<% end %>

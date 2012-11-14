@@ -1,0 +1,10 @@
+
+<% @stocks_split.each do |stock| %>
+  <div class="stock">
+    <h2><%= stock.upcase %></h2>
+    <p>
+    <% quote = YahooFinance::get_quotes(YahooFinance::StandardQuote, stock.upcase)[stock.upcase].lastTrade %>
+    <%= quote %>
+    </p> 
+  </div>
+<% end %>
