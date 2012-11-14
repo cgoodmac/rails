@@ -12,16 +12,14 @@
  *= require_tree .
  */
 
- .stock {
-  float: left;
-  background-color: white;
+.movie {
+  width: 200px;
+  border: 1px solid black;
   margin: 10px;
   padding: 10px;
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
- }
+  float: left;
+}
 
-body {
-  background-color: gray;
+img {
+  width: 180px;
 }

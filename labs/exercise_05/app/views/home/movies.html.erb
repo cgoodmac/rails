@@ -1,0 +1,37 @@
+<% @movies.each do |movie| %>
+  <% movie_search = movie.gsub(" ", "+") %>
+  <% query = HTTParty.get('http://omdbapi.com/?t='+ movie_search) %>
+  <% json = JSON(query) %>
+    <% poster = json["Poster"] %>
+    <% title = json["Title"] %>
+    <% year = json["Year"] %>
+    <% rated = json["Rated"] %>
+    <% released = json["Released"] %>
+    <% runtime = json["Runtime"] %>
+    <% director = json["Director"] %>
+    <% genre_split = json["Genre"].split(', ') %>
+    <% actors_split = json["Actors"].split(', ') %>
+  <div class="movie">
+    <%= image_tag poster %>
+    <p>Title: <%= title %></p>
+    <p>Year: <%= year %></p>
+    <p>Rated: <%= rated %></p>
+    <p>Released: <%= released %></p>
+    <p>Runtime: <%= runtime %></p>
+    <p>Director: <%= director %></p>
+    <ul>
+    Genres:
+    <% genre_split.each do |genre| %>
+      <li><%= genre %></li>
+    <% end %>
+    </ul>  
+    <ul>
+    Actors:
+    <% actors_split.each do |actor| %>
+      <li><%= actor %></li>
+    <% end %>
+    </ul>
+  </div>
+
+<% end %>
+

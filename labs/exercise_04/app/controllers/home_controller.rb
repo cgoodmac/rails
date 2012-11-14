@@ -3,9 +3,7 @@ class HomeController < ApplicationController
   end
 
   def getstocks
-    @stocks = params[:stocks]
-    @stocks_split = @stocks.split(', ')
-    raise @stocks_split.inspect
+    @stocks = params[:stocks].split(', ')
   end
 
   def result
