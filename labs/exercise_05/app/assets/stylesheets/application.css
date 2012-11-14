@@ -11,6 +11,9 @@
  *= require_self
  *= require_tree .
  */
+* {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif
+}
 
 .movie {
   width: 200px;
