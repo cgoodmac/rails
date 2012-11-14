@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: stoqing_development #name is name of app _development
+  pool: 5
+  host: localhost
+  username: postgres
+  password: Orguss02!

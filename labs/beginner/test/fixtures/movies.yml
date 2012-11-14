@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  gross: 9.99
+  tickets_sold: 1
+  rating: MyString
+  release_date: 2012-11-12
+
+two:
+  name: MyString
+  description: MyText
+  gross: 9.99
+  tickets_sold: 1
+  rating: MyString
+  release_date: 2012-11-12
