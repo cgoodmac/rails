@@ -7,12 +7,12 @@
 
 <p>
   <b>Song:</b>
-  <%= @dog.song %>
+  <%= audio_tag @dog.song, :controls => true %>
 </p>
 
 <p>
   <b>Youtube:</b>
-  <%= @dog.youtube %>
+  <%= render :partial => 'shared/youtube', :locals => {:youtube => @dog.youtube} %>
 </p>
 
 
