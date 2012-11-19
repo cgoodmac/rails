@@ -1,3 +1,15 @@
-// Place all the styles related to the cats controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "awesome";
+
+.cat {
+  p {
+    @include awesome(3px, blue);
+  }
+
+  h1 {
+    @include awesome(10px, red)
+  }
+
+  h2 {
+    @include awesome(20px, purple)
+  }
+}
