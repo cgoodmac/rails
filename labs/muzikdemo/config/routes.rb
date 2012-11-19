@@ -1,4 +1,7 @@
 Muzikdemo::Application.routes.draw do
+  resources :cats
+
+
   resources :dogs
 
 
