@@ -4,5 +4,6 @@ class HomeController < ApplicationController
 
   def movies
     @movies = params[:movies].split(', ')
+    # binding.pry
   end
 end

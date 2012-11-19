@@ -2,7 +2,7 @@ Exercise04::Application.routes.draw do
 
   match '/stock' => 'home#stock'
   match '/getstocks' => 'home#getstocks', :via => :post
-  match '/result' => 'home#result'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

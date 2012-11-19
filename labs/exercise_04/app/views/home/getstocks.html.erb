@@ -1,10 +1,9 @@
 
 <% @stocks.each do |stock| %>
   <div class="stock">
-    <h2><%= stock.upcase %></h2>
+    <h2><%= stock.symbol %></h2>
     <p>
-    <% quote = YahooFinance::get_quotes(YahooFinance::StandardQuote, stock.upcase)[stock.upcase].lastTrade %>
-    <%= quote %>
+    <%= number_to_currency(stock.lastTrade) %>
     </p> 
   </div>
 <% end %>

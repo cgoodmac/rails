@@ -1,0 +1,22 @@
+/*
+ *= require 'reset'
+ *= require_self
+ */
+
+.field {
+  margin-bottom: 10px;
+}
+
+  .field label {
+    display: block;
+  }
+
+body {
+  padding: 25px;
+  background-color: #252525;
+  color: #cccccc;
+}  
+
+.errors {
+  color: #ff0000;
+}

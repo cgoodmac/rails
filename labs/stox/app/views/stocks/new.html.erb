@@ -1,0 +1,13 @@
+<%= form_for @stock do |f| %>
+  <div class="field">
+    <%= f.label :symbol %>
+    <%= f.text_field :symbol %>
+  </div>
+  <div class="field">
+    <%= label_tag 'Enter number of quotes you want' %>
+    <%= number_field_tag 'number' %>
+  </div>
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>

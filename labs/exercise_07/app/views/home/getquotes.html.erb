@@ -1,0 +1,11 @@
+<h1>
+<%= @stock %>
+
+<ul>
+<% @quotes.each do |quote| %>
+  <li><%= number_to_currency quote %></li>
+<% end %>
+</ul>
+
+Average: <%= number_to_currency @average %>
+</h1>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnimalKingdom</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+Animal Kingdom
+</header> 
+<nav>
+  <%= link_to "Home", root_path %>
+  <%= link_to "Animals", animals_path %>
+  <%= link_to "New Animal", new_animal_path %>
+</nav>  
+<%= yield %>
+
+<footer>
+(c) 2012 Animal Corporation
+</footer>
+</body>
+</html>

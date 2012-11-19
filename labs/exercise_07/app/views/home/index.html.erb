@@ -1,0 +1,7 @@
+<%= form_tag '/getquotes' do %> 
+  <%= label_tag 'Enter stock' %>
+  <%= text_field_tag 'stock' %>
+  <%= label_tag 'Enter number of quotes you want' %>
+  <%= number_field_tag 'number' %>
+  <%= submit_tag 'Get Quotes!' %>
+<% end %>
