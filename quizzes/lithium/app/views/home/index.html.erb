@@ -1,0 +1,6 @@
+<input type="button" id="name-button" value="Name" />
+
+<%= form_tag '/calc', :id => 'form', :remote => true do %>
+  <%= text_field_tag 'name' %>
+  <%= submit_tag 'Go!' %>
+<% end %>
