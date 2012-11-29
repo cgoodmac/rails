@@ -1,0 +1,10 @@
+ <%= form_tag '/place', :id => 'form', :remote => true do %>
+  <div class="field">
+    Place
+    <%= text_field_tag 'place' %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Go!' %>
+  </div>
+<% end %>
