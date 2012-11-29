@@ -1,0 +1,65 @@
+USE CASES
+
+Admins should be able to do xyz
+User needs to be able to do abc
+
+SENDING EMAILS
+
+AWS SES
+
+aws-ses gem install
+add ses_config.rb to initializers folder
+add this code to the file:
+
+ActionMailer::Base.add_delivery_method :ses, AWS::SES::Base, :access_key_id => ENV['AWSKEY'], :secret_access_key => ENV['AWSSEC']
+
+add this line to line 17 of config/environments/development.rb
+
+config.action_mailer.delivery_method = :ses
+
+if you want to send email in production environment add that line to production env too
+
+when you push to heroku it auto switches to production environment
+
+In terminal:
+rails g mailer (not a great mailer) - shows options
+
+rails g mailer Notifications welcome logoff
+
+creates a mailer folder in the app and views/notifications/ text files
+
+you can send html emails by changing text files to html
+
+Add this line where you want the action to happen in the controller
+
+Notifications.welcome(@pirate.name).deliver
+
+FULL TEXT SEARCH
+
+pg does it by default
+
+Use javascript key logger
+
+$(function(){
+
+  $('body').keypress(pressed_key); //creates a keypress function
+
+});
+
+function pressed_key(key) 
+{
+  // ctrl-f
+  if(key.keyCode == 6)
+  {
+    console.log('you pressed ctrl-f');
+
+  }
+
+  //ctrl-h
+    if(key.keyCode == 8)
+  {
+    console.log('you pressed ctrl-h');
+
+  }
+}
+

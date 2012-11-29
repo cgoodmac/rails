@@ -55,7 +55,7 @@ carrierwave
 fog => amazon integration 
 annotate
 rails footnotes
-don't say scafford
+don't say scaffold
 
 CONFIG/INITIALIZERS
 

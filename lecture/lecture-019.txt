@@ -1,0 +1,11 @@
+TWILIO
+
+simple, see the lab
+
+gem 'twilio-ruby'
+
+STRIPE
+
+stripe solves prob of keeping credit card data on your own server
+
+gem 'stripe'

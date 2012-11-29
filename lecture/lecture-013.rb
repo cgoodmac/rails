@@ -27,11 +27,6 @@ Everything up-to-date
 Creating sleepy-lake-7667... done, stack is cedar
 http://sleepy-lake-7667.herokuapp.com/ | git@heroku.com:sleepy-lake-7667.git
 Git remote heroku added
-~/Dropbox/wdi/group/foodee ✗ master > git remove -v
-git: 'remove' is not a git command. See 'git --help'.
-
-Did you mean this?
-  remote
 ~/Dropbox/wdi/group/foodee ✗ master > git remote -v
 heroku  git@heroku.com:sleepy-lake-7667.git (fetch)
 heroku  git@heroku.com:sleepy-lake-7667.git (push)
