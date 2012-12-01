@@ -18,11 +18,9 @@ class HomeController < ApplicationController
       @return_message = "Your TEXT has been sent!"
     
     else
-          @email = params[:email]
-    @phone = params[:phone]
 
-      Notifications.hi(@email, @message).deliver
-      @return_message = "Your EMAIL has been sent!"
+    Notifications.hi(@email, @message).deliver
+    @return_message = "Your EMAIL has been sent!"
     
     end
 
