@@ -1,0 +1,33 @@
+<%= render :partial => 'map', :locals => {:lat => 0, :long => 0, :zoom => 2} %>
+
+<%= render :partial => 'pin', :collection => @vacations, :as => :vacation %>
+
+<h1>Listing vacations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Lat</th>
+    <th>Long</th>
+    <th>Zoom</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vacations.each do |vacation| %>
+  <tr>
+    <td><%= vacation.name %></td>
+    <td><%= vacation.lat %></td>
+    <td><%= vacation.long %></td>
+    <td><%= vacation.zoom %></td>
+    <td><%= link_to 'Show', vacation %></td>
+    <td><%= link_to 'Edit', edit_vacation_path(vacation) %></td>
+    <td><%= link_to 'Destroy', vacation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vacation', new_vacation_path %>

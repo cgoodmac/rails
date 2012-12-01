@@ -1,0 +1,5 @@
+$('#creaturetypes').empty();
+
+<% @creature_types.each do |ct| %>
+  $('#creaturetypes').prepend('<li><%= link_to ct.name, creaturetype_path(ct), :class => 'btn btn-info' %></li>');
+<% end %>

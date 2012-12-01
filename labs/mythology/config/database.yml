@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mythology_development  #name is name of app _development 
+  pool: 5
+  host: localhost
+  username: postgres
+  password: Orguss02!
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: mythology_production  #name is name of app _development 
+  pool: 5
+  host: localhost
+  username: postgres
+  password: Orguss02!

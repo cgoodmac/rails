@@ -1,0 +1,3 @@
+$('#godlist').empty();
+$('#godlist').append("<%=j render :partial => 'gods', :locals => {:gods => @gods} %>");
+//put a j in front of code if the ruby in javascript isn't working

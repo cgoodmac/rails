@@ -1,0 +1,7 @@
+<%= render 'search' %>
+
+<div id="godlist">
+<%= render :partial => 'gods', :locals => {:gods => @gods} %>
+</div>
+
+<!-- if you need to pass extra info, need to call partials with render :partial -->

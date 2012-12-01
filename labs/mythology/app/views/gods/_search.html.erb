@@ -1,0 +1,4 @@
+<%= form_tag '/gods/search', :id => 'searchform', :remote => true do %>
+  <%= text_field_tag 'query' %>
+  <!-- no submit button, submits on ENTER -->
+<% end %>

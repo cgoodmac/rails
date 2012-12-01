@@ -1,0 +1,3 @@
+$('#creaturetypes').prepend('<li><%= link_to @ct.name, creaturetype_path(@ct), :class => 'btn btn-info' %></li>'); //creates a link to the creature type
+$('#creature_form #name').val(''); //blanks out value after submission
+$('#creature_form #name').focus(''); //focuses back on input

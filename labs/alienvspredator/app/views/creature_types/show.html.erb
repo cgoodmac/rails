@@ -1,0 +1,7 @@
+<h1><%= @creaturetype.name %></h1>
+
+<ul>
+  <% @creaturetype.creatures.each do |creature| %>
+    <li>Name: <%= creature.name %> Weapon: <%= creature.weapon %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,136 @@
+GITHUB REVIEW
+
+create project
+git init
+git remove add origin https://github.com/chyld/awesome.git
+git add .
+git commit -m "initial commit"
+git push origin master (origin means github, master means master branch)
+master branch should always be bug free
+development is the branch you work in to work out issues
+git branch -a <= shows all branches, on your machine and REMOTE
+don't wait very long between commits
+your branch isn't on github till you push to github
+In github site:
+Issues => "Add dog feature" => assign someone
+Set a milestone
+Write a message
+You can comment on the message
+For features you complete, do git commit -m "elephant feature closed #3" (#3 is the issue)
+  key words to close an issue are close, closes, closed, fix, fixed, fixes and then the # of the issue
+collaborators clone then commit and close
+
+*all the people working on new features all work on DEVELOPMENT branch. If they're working on something super-experimental, they'll go to a separate branch, otherwise everything stays on development. Workers just deal with merge issues
+
+GITHUB HOMEPAGE
+
+after iniital commit create branch gh-pages
+
+push to gh-pages
+
+*wait 10 minutes for website to create initially!
+
+address is at: http://cgoodmac.github.com/portfolio
+
+after that, every push is instantaneous
+
+as many pages of data, images, js, etc.
+
+but not rails apps.
+
+SERVICE ORIENTED ARCHITECTURE
+
+have two separate apps that communicate, with one app going elsehwere for more data if necessary
+
+MONSTROSITY
+
+http://localhost:3000/pirates.json returns json!!!
+
+its in the scaffold, in the controller:
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @pirates }
+    end
+
+By default, calls index.html.erb
+
+If you call .json, it instead renders @pirates as json
+
+html is human readable, json is bot readable
+render json: @pirates
+^
+is the newer version of render :json => @pirates (the older syntax)
+
+most of the code you will encounter will use the hash rocket
+
+you can also do format.xml {render xml: @pirates}
+
+Don't have a public-facing UI for your SOA service
+
+public should only be able to use pirate-client, not pirate-service
+
+pirate-client will communicate with pirate-service
+
+address to use to get json: localhost:3000/pirates.json
+
+http://api.jquery.com/jQuery.ajax/
+
+Example code: 
+$.ajax({
+  type: "POST",
+  url: "some.php",
+  data: { name: "John", location: "Boston" }
+}).done(function( msg ) {
+  alert( "Data Saved: " + msg );
+});
+
+Put this in your javascript! Change type (it's a get), change url, remove data:
+
+Add before filter at the bottom of the pirates controller, below "private"
+
+so it can't be called from the internet
+
+  private
+    def add_cross_origin_access 
+      response.headers['Access-Control-Allow-Origin'] = '*' #
+    end
+
+then we add a before filter at the top so that it runs before anything else
+
+(You can put 'debugger' anywhere in JS to debug it)
+
+Final code:
+
+function get_all_pirates() 
+{
+  $.ajax({
+  type: "GET",
+  url: "http://localhost:3000/pirates.json"
+}).done(function( msg ) {
+
+  for(var i = 0; i < msg.length; i++)
+  {
+    $('#pirates').append('<h1>' + msg[i].name + '</h1>');
+  }
+
+  });
+}
+
+
+LOCALTUNNEL
+
+The port matters!
+
+~/Dropbox/wdi/group/communikatr/communikatr-server ✗ master > localtunnel 3000
+   Failed to authenticate. If this is your first tunnel, you need to
+   upload a public key using the -k option. Try this:
+
+   localtunnel -k /Users/cgoodmac/.ssh/id_rsa.pub 3000
+~/Dropbox/wdi/group/communikatr/communikatr-server ✗ master > localtunnel -k /Users/cgoodmac/.ssh/id_rsa.pub 3000
+   This localtunnel service is brought to you by Twilio.
+   Port 3000 is now publicly accessible from http://4ykx.localtunnel.com ...
+
+to start in future
+
+localtunnel 3000

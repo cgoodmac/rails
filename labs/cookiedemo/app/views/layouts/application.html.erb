@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookiedemo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+	<%= show_dynamic_links %>
+	<%= link_to "Ninjas", ninjas_path %>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

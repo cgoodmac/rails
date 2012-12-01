@@ -1,0 +1,16 @@
+REVIEW ALERTIFY INSTALL!!!!
+
+NYC OPENDATA SUBWAY
+
+x =HTTParty.get('url')
+
+y= JSON(x.body)
+
+1.9.3p194 :008 > y["data"].class
+ => Array 
+1.9.3p194 :009 > y["data"].length
+ => 1904 
+1.9.3p194 :010 > y["data"].first
+ => [1, "1", nil, nil, nil, 0, nil, nil, "1", [nil, "40.68672833100004", "-73.9902719989999", nil, false, {"point"=>[-73.9902719989999, 40.68672833100004]}], "Smith St & Bergen St At Ne Corner (To Manhattan And Queens Only)", "http://www.mta.info/nyct/service/", "F-G"] 
+
+ subway.create (:name => ____, :lat => ______, :long => _______)
