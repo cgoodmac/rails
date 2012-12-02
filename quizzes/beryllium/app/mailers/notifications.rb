@@ -7,10 +7,9 @@ class Notifications < ActionMailer::Base
   #   en.notifications.message.subject
   #
   def hi(email, message)
-    @email = email
+    email = email
     @message = message
 
-    @greeting = "Hi"
-    mail to: "#{@email}", :subject => "You have a message: #{@message}"
+    mail to: "#{email}", :subject => "You have a message!"
   end
 end
