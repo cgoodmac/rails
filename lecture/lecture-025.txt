@@ -1,0 +1,15 @@
+RECURSION
+
+FOR EACH ITEM IN MEMORY, EACH BOX ON THE STACK, IT REMEMBERS WHAT LINE YOU WERE ON
+
+You have to be conscious of the stack frame. What are the vars in each stack, what line are you on in each stack?
+
+BIG O NOTATION ****** INTERVIEW QUESTION ******
+
+Hash = constant time (each seach takes 1 step no matter how many items)
+Tree = O(log n) - depends on amount of items in tree. 1000 items, log of 1000
+Array = y=mx+b (linear), more items, more time it MAY take to find something
+
+BIG O = on the order of (linear, asymptotic, logarithmic, exponential)
+
+Bubble sort O(n^2) => exponential order of time. Have four items, could take 16 steps!

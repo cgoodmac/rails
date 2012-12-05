@@ -1,0 +1,205 @@
+COMPUTER SCIENCE
+
+strings = 'hello'
+boolean = t/f
+integer = 3,5,7
+float = 3.14159
+
+SEE NOTEBOOK!
+
+CODE STUFF
+
+Put non-railsy classes in /lib folder
+
+class Stack
+  def initialize  
+    @data = []
+  end
+
+  def to_s # this runs automatically when you call, overrides the <object> thingy
+    "There are #{@data.length} items in the stack"
+  end
+
+end
+
+s1 = Stack.new
+ => There are 0 items in the stack 
+1.9.3p194 :002 > [].push(3)
+ => [3] 
+1.9.3p194 :003 > [].push(6)
+ => [6] 
+1.9.3p194 :004 > a = []
+ => [] 
+1.9.3p194 :005 > a.push(4)
+ => [4] 
+1.9.3p194 :006 > a.push(6)
+ => [4, 6] 
+1.9.3p194 :007 > a.push(8)
+ => [4, 6, 8] 
+1.9.3p194 :008 > a.pop
+ => 8 
+1.9.3p194 :009 > a.pop
+ => 6 
+1.9.3p194 :010 > a.pop
+ => 4 
+1.9.3p194 :011 > a.pop
+ => nil 
+
+ 1.9.3p194 :014 > a[a.count]= 'x'
+ => "x" 
+1.9.3p194 :015 > a[a.count]= 'y'
+ => "y" 
+1.9.3p194 :016 > a
+ => ["x", "y"] 
+
+
+**instance variable lives as long as Object it lives in is living
+**when rails pushes it to a view, however, it's done
+
+ADD THIS METHOD TO CLASS STACK
+
+
+class Stack
+  def initialize  
+    @data = []
+  end
+
+  def push(value)
+    @data[@data.count] = value
+  end
+
+  def to_s # this runs automatically when you call, overrides the <object> thingy
+    "There are #{@data.length} items in the stack: #{@data}"
+  end
+
+end
+
+1.9.3p194 :001 > s1 =Stack.new
+ => There are 0 items in the stack 
+1.9.3p194 :002 > s1.push(3)
+ => 3 
+1.9.3p194 :003 > s1.push(5)
+ => 5 
+1.9.3p194 :004 > s1.push(7)
+ => 7 
+1.9.3p194 :005 > s1
+ => There are 3 items in the stack 
+
+1.9.3p194 :006 > a =[1,2,3]
+ => [1, 2, 3] 
+1.9.3p194 :007 > a
+ => [1, 2, 3] 
+1.9.3p194 :008 > a.delete(3)
+ => 3 
+1.9.3p194 :009 > a
+ => [1, 2] 
+1.9.3p194 :010 > a.delete(a[-1])
+ => 2 
+1.9.3p194 :011 > a
+ => [1] 
+
+.delete simulates popping
+
+ADDING A POP
+
+class Stack
+  def initialize  
+    @data = []
+  end
+
+  def push(value)
+    @data[@data.count] = value
+  end
+
+  def pop
+    @data.delete(@data[-1])
+  end
+
+  def to_s # this runs automatically when you call, overrides the <object> thingy
+    "There are #{@data.length} items in the stack: #{@data}"
+  end
+
+end
+
+1.9.3p194 :001 > s1 = Stack.new
+ => There are 0 items in the stack 
+1.9.3p194 :002 > s1.push('x')
+ => "x" 
+1.9.3p194 :003 > s1.push('y')
+ => "y" 
+1.9.3p194 :004 > s1.push('z')
+ => "z" 
+1.9.3p194 :005 > s1
+ => There are 3 items in the stack 
+1.9.3p194 :006 > s1.pop
+ => "z" 
+1.9.3p194 :007 > s1
+ => There are 2 items in the stack 
+1.9.3p194 :008 > 
+
+WE JUST CREATED OUR OWN DATA STRUCTURE
+
+TO PUT FILES IN LIB, UNCOMMENT LINE 19 in APPLICATION.RB, add whatever path you want
+
+SESSION
+
+session is created by rails. it's a hash
+stored in the cookie! rails communicates with the browser cookie
+
+QUEUE
+
+SINGLE LINKED LIST (SEARCH ENGINE!!!!!)
+
+class Node
+  attr_accessor :data, :nxt
+
+  def to_s
+    "The data is #{data} and the next node's data is #{nxt.data if nxt}"
+  end #next is a reserved word
+
+end
+
+1.9.3p194 :001 > head = Node.new
+ => The data is  and the next node's data is  
+1.9.3p194 :002 > head.data = 3
+ => 3 
+1.9.3p194 :003 > head
+ => The data is 3 and the next node's data is  
+1.9.3p194 :004 > x = Node.new
+ => The data is  and the next node's data is  
+1.9.3p194 :005 > x.data = 5
+ => 5 
+1.9.3p194 :006 > x
+ => The data is 5 and the next node's data is  
+1.9.3p194 :007 > head.nxt = x
+ => The data is 5 and the next node's data is  
+1.9.3p194 :008 > head
+ => The data is 3 and the next node's data is 5 
+1.9.3p194 :009 > y = Node.new
+ => The data is  and the next node's data is  
+1.9.3p194 :010 > y.data = 7
+ => 7 
+1.9.3p194 :011 > head.nxt.nxt = y
+ => The data is 7 and the next node's data is  
+1.9.3p194 :012 > head
+ => The data is 3 and the next node's data is 5 
+1.9.3p194 :013 > x
+ => The data is 5 and the next node's data is 7 
+1.9.3p194 :014 > y
+ => The data is 7 and the next node's data is  
+1.9.3p194 :015 > z = Node.new
+ => The data is  and the next node's data is  
+1.9.3p194 :016 > z.data = 4
+ => 4 
+
+Add an item in between two links
+
+1.9.3p194 :017 > r = head.nxt
+ => The data is 5 and the next node's data is 7 
+1.9.3p194 :018 > head.nxt = z
+ => The data is 4 and the next node's data is  
+1.9.3p194 :019 > z.nxt = r
+ => The data is 5 and the next node's data is 7 
+
+ *THIS WOULDVE WORKED BECAUSE X WAS THERE BUT WE USED R INSTEAD OF X TO ILLUSTRATE. JUST MAKE SURE THERE'S SOMETHING THERE AND YOU'RE NOT JUST DOING NEXT.NEXT.NEXT. MAKE SURE THERE'S DATA THERE TO HOLD ON TO.
+

@@ -1,0 +1,156 @@
+Relentless*
+Enjoyed*
+Problem solver*
+Like building & process*
+Organized
+Creative power and scale*
+Power
+Passion
+Immersed in it
+Scale*
+Methodical
+Know limits/resourceful
+
+Pattern-recognition
+Entrepreneurship
+"I want to know what it's like to be the hot girl at the party"
+
+Remember:
+  COMMUNICATION SKILLS
+
+KEY QUESTIONS*
+Name
+Experience w/ coding
+Why dev
+Interesting fact
+Why you good?
+  Need to convince them you would be good
+
+Mention side businesses and hedge fund experience
+  Problem-solver and artist
+  Finance/econ/tech and entrepreneurship
+
+Make the leap of faith easy
+
+Interview required prep
+  If you haven't interviewed in five years, you won't get the job
+  Expect to fail in first interviews
+  Don't interview for dream job first!!!!! You'll fail the first couple
+  Get punched in the face!
+
+Gettting noticed
+
+  The web
+    linkedin
+    News - HN, Twitter
+    Company website
+    University connections
+
+  Projects
+    Opensource
+    GA
+    Discussion courps
+
+  Active In-Person
+    Referrals - ask your friends
+    Prof. groups (meetups, conferences)
+    Events (Hackathons, Lean Startup, Pitch Sessions)
+
+What do I want?
+
+  What industry? 
+    (Talk to people that work in that industry - treatings.com, letslunch.com)
+      Talk to at least five people a week
+      Just ask, "I want to learn"
+      Quantity = quality
+  Consulting vs full-time
+  Large vs small company
+  What matters to you?
+    The product? The technology stack? -Most cos prefer the product
+  Go to a company that will teach you what you want to know
+    Want to know how to be an entrepreneur? Get a position that will let you learn that
+      Find good people to learn from
+
+  DON'T SAY YOU WANT TO START YOUR OWN THING
+    I want to be better every single day
+    I want to lead teams, I want to learn software at scale
+    "I've seen what it's like to be an entrepreneur"
+
+ENGINEERING ROLES
+
+Software
+  Back end - server - Ruby/Rails/Postgres
+  Front end - client/browser - HTML/CSS/JS
+  You want to be full-stack - walks the entire thing
+  Rails - full-stack developer
+
+  UI Designer - Makes stuff look awesome
+    Front end gets assets from UI/designer
+
+  Data scientists analyze the data coming in
+  Information Architect (?)
+  UX/User Experiences - functionality, where eyes will go, etc.
+  QA - Quality Assurance - build stuff to make sure all the stuff works
+
+JOB DESCRIPTION
+
+  you're looking for JUNIOR/ENTRY-LEVEL DEV
+  separate required from nice-to-haves
+  Is this a new position or a replacement? If it's new, that's good, growth. If replacement, just something to think about
+  People rarely leave growing companies unless theres something up with the culture
+  Research Linkedin,etc., but play it cool
+
+RESEARCH THE COMPANY
+
+  Watch interviews, etc.
+  Find someone on the inside (GREAT! It's a culture fit, no recruiter fee, great!)
+
+JOB BOARDS
+
+  jobs.rubynow.com
+
+
+SELL YOURSELF AS PROBLEM-SOLVER AND QUICK LEARNER
+  You can apply for jobs that ask for one-year of development
+  Any problem-solving job gives you a CS degree
+  Take Stanford algorithms course
+  Get on jobs that are willing to send out open-source code
+  Look at job desc where they develop you as a professional
+  Provide training, development, books, screencasts, send developers to meetups and conferences
+
+NEVER SAY ANYTHING BAD ABOUT YOUR EMPLOYERS
+  Talk about how you've grown and learned
+  Know at least 200 people on FBook 
+
+RESUME
+  Clean/consistent (EASY ON EYES)
+  Bulletpoints => the point of a resume is to get you the first interview
+    Shape your story
+    It's a conversation starter***
+  Put relevant jobs (problem-solving)
+  GPA - above 3.0 is good
+  Resume should show GROWTH - move forward
+
+CONVERSATIONS
+  Transactional - judging based on facts
+  *Relational conversation - get to this point quickly
+
+SHOW A PASSION FOR YOUR CRAFT
+
+SHOW A PORTFOLIO
+
+NYU/POLY 40 - 60 hours one class. More than a semester's worth of work a week. A year's worth of college in 9 weeks. 8 - 9 college courses in 9 weeks
+
+DESIGN
+
+  Standard industry - don't get creative
+  But in general, safe won't hurt you
+
+TECH SKILLS
+  
+  LIST STUFF! Chrome dev tools, RUby, Rails, Postgres, MySQL
+
+EVERY SENTENCE
+
+  Did you do something interesting, did you lead it, were you unique?
+  Anything with figures, put them in the front

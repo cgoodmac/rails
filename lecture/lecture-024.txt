@@ -1,0 +1,339 @@
+MORE COMPUTER SCIENCE
+
+  PRY-DEBUGGER
+    
+    -next - lets you go next step
+    -step - runs the next function
+    -continue - runs rest of the program
+
+  PRY-STACK_EXPLORER
+
+    -show-stack
+    -down
+
+Our computers are stack-based machines
+
+SEE NOTEBOOK
+
+Stacks are like trays at a buffet LIFO
+Queues are like a train FIFO
+
+class StackTest
+
+  def main
+    a = "hello"
+    x  
+  end
+
+  def x
+    b = 3
+    y
+  end
+
+  def y
+    c = true
+    z
+  end
+
+  def z 
+    binding.pry
+    d = 9
+  end
+
+end
+
+[1] pry(main)> s = StackTest.new
+=> #<StackTest:0x000001011e08c8>
+[2] pry(main)> s.main
+
+Frame number: 0/17
+Frame type: method
+
+From: /Users/cgoodmac/Dropbox/wdi/rails/labs/single-linked-list/lib/cs/stack_test.rb @ line 18 StackTest#z:
+
+    18: def z 
+ => 19:   binding.pry
+    20:   d = 9
+    21: end
+
+[1] pry(#<StackTest>)> show-stack
+
+Showing all accessible frames in stack (18 in total):
+--
+=> #0 [method]  z <StackTest#z()>
+   #1 [method]  y <StackTest#y()>
+   #2 [method]  x <StackTest#x()>
+   #3 [method]  main <StackTest#main()>
+
+[1] pry(#<StackTest>)> show-stack
+
+Showing all accessible frames in stack (18 in total):
+--
+=> #0 [method]  z <StackTest#z()>
+   #1 [method]  y <StackTest#y()>
+   #2 [method]  x <StackTest#x()>
+   #3 [method]  main <StackTest#main()>
+   #4 [eval]    <main> 
+   #5 [method]  re <Pry#re(target=?)>
+   #6 [method]  rep <Pry#rep(target=?)>
+   #7 [block]   block (3 levels) in repl <Pry#repl(target=?)>
+   #8 [block]   block (2 levels) in repl <Pry#repl(target=?)>
+   #9 [block]   block in repl <Pry#repl(target=?)>
+   #10 [method]  repl <Pry#repl(target=?)>
+   #11 [method]  start <Pry.start(target=?, options=?)>
+   #12 [method]  start <Pry.start(target=?, options=?)>
+   #13 [method]  start <Rails::Console#start()>
+   #14 [method]  start <Rails::Console.start(app)>
+   #15 [top]     <top (required)> 
+   #16 [eval]    <main> 
+   #17 [top]     <main> 
+[2] pry(#<StackTest>)> down
+Error: At bottom of stack, cannot go further!
+[3] pry(#<StackTest>)> up
+
+Frame number: 1/17
+Frame type: method
+
+From: /Users/cgoodmac/Dropbox/wdi/rails/labs/single-linked-list/lib/cs/stack_test.rb @ line 13 StackTest#y:
+
+    13: def y
+    14:   c = true
+ => 15:   z
+    16: end
+
+[4] pry(#<StackTest>)> ls
+StackTest#methods: main  x  y  z
+locals: _  _dir_  _ex_  _file_  _in_  _out_  _pry_  c
+[5] pry(#<StackTest>)> up
+
+Frame number: 2/17
+Frame type: method
+
+From: /Users/cgoodmac/Dropbox/wdi/rails/labs/single-linked-list/lib/cs/stack_test.rb @ line 8 StackTest#x:
+
+     8: def x
+     9:   b = 3
+ => 10:   y
+    11: end
+
+[6] pry(#<StackTest>)> ls
+StackTest#methods: main  x  y  z
+locals: _  _dir_  _ex_  _file_  _in_  _out_  _pry_  b  
+
+TWO TYPES OF MEMORY:
+
+Stack memory and the heap
+Stores like arrays and big data structures are in the heap
+Your computer doesnt have much stack memory
+The stack stacks what it has to for each program
+
+RECURSION
+
+def main()
+  x
+end
+
+def x()
+  x
+end
+
+This would call main, then x,x,x,x,x,x... stack overflow!
+
+an infinite loop like this:
+
+while true
+end
+
+would cause comp to be unresponsive
+
+in stack overflow, you're actually using memory, so you'll run out and it blows up, a lot quicker too
+
+you'll get this error: SystemStackError: stack level too deep
+from /usr/local/rvm/gems/ruby-1.9.3-p194/gems/pry-0.9.10/lib/pry/pry_instance.rb:275
+
+(1) base step
+(2) recursive step
+
+RECURSION:
+
+class StackTest
+
+  def main
+    x(3)
+  end
+
+  def x(value)
+    if value!= 1
+      x(value -1)
+    end
+    puts value
+  end
+
+end
+
+[1] pry(main)> s = StackTest.new
+=> #<StackTest:0x0000010228d018>
+[2] pry(main)> s.main
+1
+2
+3
+
+PRINTS OUT 1,2,3 BECAUSE AT END OF FUNCTION IT UNWINDS, AND THE VALUE IN EACH BLOCK BELOW THE END IS 2, THEN 3
+
+
+RECURSIVE FACTORIAL
+
+class StackTest
+
+  def main(value)
+    factorial(value)
+  end
+
+  def factorial(value)
+
+    if value > 1
+      value * factorial(value - 1)
+    else
+      1
+    end
+
+  end
+
+end
+
+FIBONACCI SEQUENCE
+
+class StackTest
+
+  def head(value)
+    fib(value)
+  end
+
+  def fib(value)
+    if value > 2
+      fib(value-1) + fib(value-2)
+    else
+      1 # if 1 or 2, returns 1, from 1 1 2 3
+    end
+  end
+
+end
+
+s.head(10)
+=> 55
+
+SET
+
+all items in a set have to be unique
+
+DOUBLE-LINKED ITEMS
+
+class Node
+
+  attr_accessor :data, :nxt, :prv
+
+  def initialize(value)
+    @data = value
+  end
+
+  def to_s
+    "#{prv.try(:data) || 0} < - #{data} -> #{nxt.try(:data) || 0}"
+  end #next is a reserved word
+
+end 
+
+n1 = Node.new(3)
+=> 0 < - 3 -> 0
+
+[1] pry(main)> n1 = Node.new(3)
+=> 0 < - 3 -> 0
+[2] pry(main)> n2 = Node.new(5)
+=> 0 < - 5 -> 0
+[3] pry(main)> n3 = Node.new(7)
+=> 0 < - 7 -> 0
+[4] pry(main)> n1.nxt = n2.prv
+=> nil
+[5] pry(main)> n1.nxt = n2
+=> 0 < - 5 -> 0
+[6] pry(main)> n2.prv = n1
+=> 0 < - 3 -> 5
+[7] pry(main)> n1.nxt.nxt = n3
+=> 0 < - 7 -> 0
+[8] pry(main)> n1.nxt.nxt.prv = n1.nxt
+=> 3 < - 5 -> 7
+[9] pry(main)> 
+
+Recursion is often a more elegant solution than a loop, but recursion consumes stack space and can cause stack blow-ups
+
+
+class LinkedList
+  attr_accessor :head
+
+  def initialize
+    @head = nil
+  end
+
+  def enqueue(value)
+    if @head.nil? #if nothing in the queue, new up a new node, attach head to it
+      @head = Node.new(value) # CAN USE SELF OR @. IF ASSIGNING, NEED TO USE IT. IF NOT ASSIGNING, DON'T NEED @ OR SELF. 
+    else
+      temp = Node.new(value)
+      temp.nxt = head
+      @head.prv = temp
+      @head = temp
+    end
+  end
+
+  def dequeue
+    tail = get_last_node(@head)
+    
+  end
+
+  def get_last_node(node)
+    if node.nxt
+      get_last_node(node.nxt)
+    else
+      node
+    end
+  end
+
+end
+
+TO SORT A TREE:
+
+1. prev
+3. right
+
+auto-sorts!
+only 10 comparisons to find a 10,000 item list
+
+
+class Tree
+  attr_accessor :root
+
+  def insert(word)
+    if @root.nil?
+      @root = Node.new(word)
+    else
+      insert_node(@root, word)
+    end
+  end
+
+  def insert_node(node, value)
+    if (value <= node.data) && (node.prv.nil?)
+      node.prv = Node.new(value)
+    elsif (value > node.data) && (node.nxt.nil?)
+      node.nxt = Node.new(value)
+    elsif (value <= node.data) && (node.prv)
+        insert_node(node.prv, value)
+    elsif (value > node.data) && (node.nxt)
+        insert_node(node.nxt, value)
+    end
+  end
+end
+
+This is how search engines, databases, compilers work, everything
+
+Databases search by breaking the search base in half, that's how it finds things so quick
+
+

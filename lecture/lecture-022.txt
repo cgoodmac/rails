@@ -1,0 +1,43 @@
+JAKD
+
+1. register
+
+2. create profile
+  -avatar (create tiny thumb)
+  -username
+  -password
+  -account balance
+  -games_won
+  -games_lost
+  -lifetime_amount_won
+  -lifetime_amount_lost
+
+  3. login
+
+  4. go to a table
+
+  5. click on a person, you can send them a message
+
+  6. everyone clicks "I'm ready"
+
+  7. You bet your amount - you can say stay/hit me
+
+  8. and you win or lose etc.
+
+  9. 52 things in an array, shuffle
+
+  write logic to determine if an ace is a 1 or 11
+
+
+
+
+1. user enters game
+2. user clicks "I'm ready"
+3. user gets two cards 
+4. dealer gets two cards
+5. compare values
+6. if user is greater than or equal to dealer, user wins
+7. increment games_won/games_lost
+8. increment amountwon/amountlost
+9. increment account balance
+10. clear everything(?)
