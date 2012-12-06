@@ -22,7 +22,7 @@ Code:
 
 3. A set is a grouping of items, all of which have to be unique. A list is a grouping of items that are not necessarily unique.
 
-4. Big O notation is used to identify how a function behaves. Processes can be linear, logarithmic, exponential (a bubble sort), and there are other types. An array is linear because each incremental piece of data added to the array linearly increases the maximum possible time to find each object in the array.
+4. Big O notation is used to identify how a function behaves. Processes can be linear, logarithmic, asymptotic (a bubble sort), and there are other types. An array is linear because each incremental piece of data added to the array linearly increases the maximum possible time to find each object in the array.
 
 5. The Big O of bubble sort is n^2.
 
