@@ -1,0 +1,9 @@
+You have less than one year experience, how can you do this job?
+  40 hours a week for nine weeks
+  average MIT student takes XYZ courses
+
+FizzBuzz
+
+function fizzbuzz(start){
+  
+}

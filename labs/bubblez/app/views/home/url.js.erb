@@ -1,0 +1,9 @@
+$('#text').empty();
+
+<% @words.each do |word|%>
+$('#text').append('<span class="word"><%= word %> </span>');
+<% end %>
+
+
+
+timerBubble()
