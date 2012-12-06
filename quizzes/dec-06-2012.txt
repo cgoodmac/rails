@@ -1,0 +1,31 @@
+1.
+
+Average of numbers between 250 & 725:
+
+Answer: 487
+
+Code:
+
+  array = []
+
+  (250..725).each do |i|
+    array << i
+  end
+
+  total = array.inject(:+)
+
+  average = total / (array.length)
+
+  puts average
+
+2. A stack is a data structure used by computers. In a recursive loop, every time the loop runs it generates a frame on the stack, which is then popped off in order of the last run first when the recursion is complete.
+
+3. A set is a grouping of items, all of which have to be unique. A list is a grouping of items that are not necessarily unique.
+
+4. Big O notation is used to identify how a function behaves. Processes can be linear, logarithmic, exponential (a bubble sort), and there are other types. An array is linear because each incremental piece of data added to the array linearly increases the maximum possible time to find each object in the array.
+
+5. The Big O of bubble sort is n^2.
+
+6. A double-linked list is constructed by pointing a node (A) to a second node (B), and then pointing B back to A as well.
+
+7. There are about 10 million people in NY. To simplify, I would assume a flat population curve and an average lifespan of 80. I would say no one below 5 or above 70 eats pizza. So about 20% of the population is out of the equation (rounding). That leaves 80% of 10 million, which is 8 million. I would estimate that each of those pizza-eating people eats 1 NY slice (or the equivalent) every two weeks, so 24 slices a year. So I would say the number of NY slices (or the equivalent) sold in NY each year is 8 million * 24, or 192 million.
