@@ -1,6 +1,6 @@
-1. HTML is hypertext markup language. It is used to format and present text on the internet.
+1. HTML is hypertext markup language. It is used to format, structure, and present text on the internet.
 
-2. Sass allows you to write CSS using nested rules, variables (like $blue for a particular shade of blue you want to use throughout the site), and other useful additions. Sass requires a processor to be processed into CSS that is actually read by a browser.
+2. Sass allows you to write CSS using nested rules, variables (like $blue for a particular shade of blue you want to use throughout the site), and other useful additions like mixins. Sass requires a processor to be processed into CSS that is actually read by a browser.
 
 3. Javascript types: strings, booleans, numbers, arrays, and objects.
 
