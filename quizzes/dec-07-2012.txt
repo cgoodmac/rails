@@ -1,0 +1,38 @@
+1. HTML is hypertext markup language. It is used to format and present text on the internet.
+
+2. Sass allows you to write CSS using nested rules, variables (like $blue for a particular shade of blue you want to use throughout the site), and other useful additions. Sass requires a processor to be processed into CSS that is actually read by a browser.
+
+3. Javascript types: strings, booleans, numbers, arrays, and objects.
+
+4. Creating an object in javascript: 
+
+var guy = {first: "Chris", last:"Goodmacher"};
+
+5. JSON is javascript object notation. APIs use JSON to communicate data, but JSON can also be used to send data within one app.
+
+6. DOM ready in jQuery is the code that executes when the DOM is loaded:
+
+$(function () {
+    // do stuff after DOM has loaded
+});
+
+In javascript the code would be something like, 
+
+var documentIsReady = false;
+$(function () { documentIsReady = true; });
+
+7. Global variables in javascript can be defined outside of a function, local variables are defined within a function.
+
+8. In Ruby, classes are blueprints for objects. So a class might be "Person", but the objects that are instances of "Person" would be "Chris," "Sally", etc.
+
+9. In Ruby, inheritance is a relation between two classes. More specifically, a class can inherit methods from a parent class. For example, the parent class of Cat might be Mammal.
+
+10. An array is a list of items in some order, but a hash consists of keys and values, with the values accessible by pointing to keys.
+
+11. Hashes are better to use for more complex data structures, especially when you're searching for something. It's easier to find data in a hash by using the key/value system than by iterating through an array.
+
+12. Some data structures: stack, queue, array, hash, and set.
+
+13. There are about 3 million people in Chicago. In the US, the average household size is about 3. So there are one million households in Chicago. Based on my experiences with acquaintances (which I consider roughly representative of the general population), I would guess that about 1 in 6 households have a piano. That estimate may be on the generous side, but I think keeping it that way takes care of the fact that not all pianos are in households (some are in stores, concert halls, etc.). So 1/6 * one million = about 150,000 pianos in Chicago.
+
+14. Manhole covers are round because if they were other shapes (square for example), there would be places where the diameter of the hole could exceed the diamater of the cover and it would be easy for the cover to fall in. 
